@@ -15,9 +15,4 @@ echo $SHELL
 echo "======== Installing OhMyZsh ======="
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" --unattended
 
-#!/bin/zsh
-echo "======== Setting ZSH Defaults ========"
-omz theme set agnoster
-omz reload
-
 echo "======== Script Complete ========"
