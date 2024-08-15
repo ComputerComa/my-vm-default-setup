@@ -14,19 +14,9 @@ $SUDO apt-get install zsh git language-pack-en fonts-powerline -y
 
 echo "======= Setting Default Shell to ZSH ======="
 
-$SUDO chsh -s $(which zsh)
+chsh -s $(which zsh)
 
 echo $SHELL
-
-echo "======== Installing OhMyZsh ======="
-$SUDO sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" --unattended
-
-echo "Pulling Default Config from github"
-$SUDO rm ~/.zshrc
-
-wget https://raw.githubusercontent.com/ComputerComa/my-vm-default-setup/main/.zshrc
-echo "reloading ZSH"
-zsh -ic "omz reload"
 
 echo "======= Setting Timezone ========"
 $SUDO timedatectl set-timezone America/Chicago
